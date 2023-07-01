@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">SummerPract</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="tv_ProfileScreen">Profile Screen</string>
+    <string name="tv_MainScreen">Main Screen</string>
+    <string name="tv_MessageScreen">Message Screen</string>
+    <string name="tv_HomeScreen">Home Screen</string>
+    <string name="tv_AppsScreen">Apps Screen</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_Smile">Smile face</string>
+    <string name="home">Home</string>
+    <string name="apps">Apps</string>
+    <string name="main">Main</string>
+    <string name="message">Message</string>
+    <string name="profile">Profile</string>
+    <string name="button">Button</string>
+    <string name="login">Login</string>
+    <string name="name">Name</string>
+
 </resources>

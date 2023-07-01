@@ -7,6 +7,7 @@
     tools:context=".AppsFragment">
 
     <TextView
+        android:id="@+id/tv_AppsScreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tv_AppsScreen"
@@ -15,5 +16,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_to_smile_apps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="100dp"
+        android:text="@string/btn_Smile"
+        app:backgroundTint="@color/light_purple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_AppsScreen" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

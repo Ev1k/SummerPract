@@ -1,9 +1,9 @@
 package com.example.summerpract
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.summerpract.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
@@ -13,8 +13,12 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHomeBinding.bind(view)
 
-        val result = arguments?.getString("key")
-        Log.e("HomeFragment", result.orEmpty())
+        binding!!.btnToSmileHome.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_homeFragment_to_coloredFragment,
+                HomeFragment.createBundle(this.toString().split("{").first())
+            )
+        }
     }
 
     override fun onDestroy() {

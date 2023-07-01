@@ -6,13 +6,95 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <Button
+        android:id="@+id/btn_main"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="116dp"
+        android:text="@string/enter"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/age_main" />
+
+    <TextView
+        android:id="@+id/cptr_main"
+        android:layout_width="329dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/capture"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/nm_main"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nm_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#00000000"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/hght_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cptr_main" />
+
+    <EditText
+        android:id="@+id/hght_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="@string/height"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/wght_main"
+        app:layout_constraintEnd_toEndOf="@+id/nm_main"
+        app:layout_constraintTop_toBottomOf="@+id/nm_main" />
+
+    <EditText
+        android:id="@+id/wght_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="@string/weight"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/age_main"
+        app:layout_constraintEnd_toEndOf="@+id/hght_main"
+        app:layout_constraintTop_toBottomOf="@+id/hght_main" />
+
+    <EditText
+        android:id="@+id/age_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
+        android:ems="10"
+        android:hint="@string/age"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btn_main"
+        app:layout_constraintEnd_toEndOf="@+id/wght_main"
+        app:layout_constraintTop_toBottomOf="@+id/wght_main" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

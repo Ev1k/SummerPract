@@ -13,7 +13,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHomeBinding.bind(view)
 
-        binding!!.btnToSmileHome.setOnClickListener {
+        binding?.btnToSmileHome?.setOnClickListener {
             findNavController().navigate(
                 R.id.action_homeFragment_to_coloredFragment,
                 HomeFragment.createBundle(this.toString().split("{").first())
@@ -27,9 +27,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     companion object {
+        final val KEY = "KEY"
         fun createBundle(result: String): Bundle {
             val bundle = Bundle()
-            bundle.putString("key", result)
+            bundle.putString(KEY, result)
             return bundle
         }
     }

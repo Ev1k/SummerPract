@@ -13,7 +13,7 @@ class AppsFragment : Fragment(R.layout.fragment_apps) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentAppsBinding.bind(view)
 
-        binding!!.btnToSmileApps.setOnClickListener {
+        binding?.btnToSmileApps?.setOnClickListener {
             findNavController().navigate(
                 R.id.action_appsFragment_to_coloredFragment,
                 HomeFragment.createBundle(this.toString().split("{").first())

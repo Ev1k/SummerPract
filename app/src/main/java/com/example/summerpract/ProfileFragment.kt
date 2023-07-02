@@ -14,7 +14,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentProfileBinding.bind(view)
 
-        binding!!.btnToSmileProfile.setOnClickListener {
+        binding?.btnToSmileProfile?.setOnClickListener {
             findNavController().navigate(
                 R.id.action_profileFragment_to_coloredFragment,
                 HomeFragment.createBundle(this.toString().split("{").first())

@@ -13,7 +13,7 @@ class MessageFragment : Fragment(R.layout.fragment_message) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMessageBinding.bind(view)
 
-        binding!!.btnToSmileMessage.setOnClickListener {
+        binding?.btnToSmileMessage?.setOnClickListener {
             findNavController().navigate(
                 R.id.action_messageFragment_to_coloredFragment,
                 HomeFragment.createBundle(this.toString().split("{").first())

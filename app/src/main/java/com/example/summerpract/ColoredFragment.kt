@@ -15,7 +15,7 @@ class ColoredFragment : Fragment(R.layout.fragment_colored) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentColoredBinding.bind(view)
 
-        val result = arguments?.getString("key")
+        val result = arguments?.getString(HomeFragment.KEY)
         Snackbar.make(view, result.toString(), Snackbar.LENGTH_LONG).show()
     }
 

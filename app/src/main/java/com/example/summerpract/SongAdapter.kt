@@ -3,9 +3,13 @@ package com.example.summerpract
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.RequestManager
 import com.example.summerpract.databinding.ItemSongBinding
 
-class SongAdapter : RecyclerView.Adapter<SongItem>() {
+class SongAdapter(
+    private var list: List<Song>,
+    private val glide: RequestManager,
+) : RecyclerView.Adapter<SongItem>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -14,14 +18,15 @@ class SongAdapter : RecyclerView.Adapter<SongItem>() {
             LayoutInflater.from(parent.context),
             parent,
             false
-        )
+        ),
+        glide = glide
     )
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return list.size
     }
 
     override fun onBindViewHolder(holder: SongItem, position: Int) {
-        TODO("Not yet implemented")
+        holder.onBind(list[position])
     }
 }

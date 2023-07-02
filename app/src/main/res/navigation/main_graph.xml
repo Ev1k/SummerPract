@@ -9,10 +9,19 @@
         android:id="@+id/listFragment"
         android:name="com.example.summerpract.ListFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" />
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_listFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
     <activity
         android:id="@+id/mainActivity"
         android:name="com.example.summerpract.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.summerpract.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
 </navigation>

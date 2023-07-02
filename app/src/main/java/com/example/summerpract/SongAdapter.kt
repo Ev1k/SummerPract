@@ -9,6 +9,7 @@ import com.example.summerpract.databinding.ItemSongBinding
 class SongAdapter(
     private var list: List<Song>,
     private val glide: RequestManager,
+    private val onItemClick: (Song) -> Unit,
 ) : RecyclerView.Adapter<SongItem>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -19,8 +20,10 @@ class SongAdapter(
             parent,
             false
         ),
-        glide = glide
-    )
+        glide = glide,
+        onItemClick = onItemClick,
+
+        )
 
     override fun getItemCount(): Int {
         return list.size
@@ -28,5 +31,10 @@ class SongAdapter(
 
     override fun onBindViewHolder(holder: SongItem, position: Int) {
         holder.onBind(list[position])
+    }
+
+    fun updateDataset(newList: List<Song>) {
+        list = newList
+        notifyDataSetChanged()
     }
 }

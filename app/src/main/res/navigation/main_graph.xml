@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/appsFragment"
+        android:name="com.example.summerpract.AppsFragment"
+        android:label="fragment_apps"
+        tools:layout="@layout/fragment_apps">
+        <action
+            android:id="@+id/action_appsFragment_to_coloredFragment"
+            app:destination="@id/coloredFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.summerpract.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_coloredFragment"
+            app:destination="@id/coloredFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.example.summerpract.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message">
+        <action
+            android:id="@+id/action_messageFragment_to_coloredFragment"
+            app:destination="@id/coloredFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.summerpract.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_homeFragmentPic_to_coloredFragment"
+            app:destination="@id/coloredFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.summerpract.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_coloredFragment"
+            app:destination="@id/coloredFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coloredFragment"
+        android:name="com.example.summerpract.ColoredFragment"
+        android:label="fragment_colored"
+        tools:layout="@layout/fragment_colored">
+        <action
+            android:id="@+id/action_coloredFragment_to_messageFragment"
+            app:destination="@id/messageFragment" />
+        <action
+            android:id="@+id/action_coloredFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_coloredFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_coloredFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_coloredFragment_to_appsFragment"
+            app:destination="@id/appsFragment" />
+    </fragment>
+</navigation>
